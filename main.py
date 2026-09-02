@@ -3,7 +3,7 @@ from spaceship import Spaceship
 pygame.init()
 
 SCREEN_WIDTH = 500 # screen size
-SCREEN_HEIGHT = 500
+SCREEN_HEIGHT = 500 #screen height
 
 
 GREY = (29, 29, 27)
