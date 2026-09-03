@@ -1,9 +1,14 @@
+<<<<<<< Updated upstream
 import pygame, random
+=======
+import pygame 
+>>>>>>> Stashed changes
 
 class Alien(pygame.sprite.Sprite):
     def __init__(self, type, x, y):
         super().__init__()
         self.type = type
+<<<<<<< Updated upstream
         path = f"images/alien_{type}.png"
         self.image = pygame.image.load(path)
         self.rect = self.image.get_rect(topleft = (x, y))
@@ -31,3 +36,8 @@ class Mysteryship(pygame.sprite.Sprite):
             self.kill()
         elif self.rect.left < 0:
             self.kill()
+=======
+        path = f"images/alien_{self.type}.png"
+        self.image = pygame.image.load(path)
+        self.rect = self.image.get_rect(topleft=(x, y))
+>>>>>>> Stashed changes

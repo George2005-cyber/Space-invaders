@@ -1,7 +1,13 @@
 import pygame, sys
+<<<<<<< Updated upstream
 from game import Game
 from spaceship import Spaceship
 from obstacle import Obstacle
+=======
+from spaceship import Spaceship
+from game import game
+
+>>>>>>> Stashed changes
 pygame.init()
  
 SCREEN_WIDTH = 500 # screen size
@@ -13,6 +19,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Python Space Invaders")
  
 clock = pygame.time.Clock()
+<<<<<<< Updated upstream
 game = Game(SCREEN_WIDTH, SCREEN_HEIGHT)
  
 spaceship = Spaceship(SCREEN_WIDTH, SCREEN_HEIGHT)
@@ -21,6 +28,11 @@ spaceship_group.add(spaceship)
  
 obstacle = Obstacle(x=100, y=SCREEN_HEIGHT - 100) 
  
+=======
+
+game = game()
+
+>>>>>>> Stashed changes
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -39,7 +51,15 @@ while True:
     
     for obstacle in game.obstacles:
         obstacle.block_group.draw(screen)
+<<<<<<< Updated upstream
     pygame.display.update()
     clock.tick(60)
  
  
+=======
+    game.aliens_group.draw(screen)
+pygame.display.update()
+clock.tick(60)
+
+
+>>>>>>> Stashed changes
