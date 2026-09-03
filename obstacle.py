@@ -7,6 +7,7 @@ class Block(pygame.sprite.Sprite):
         self.image.fill((243,216,63))
         self.rect = self.image.get_rect(topleft=(x, y))
 
+# grid representation of the obstacle layout
 grid= [
 [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
 [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
