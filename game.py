@@ -2,6 +2,9 @@ import pygame
 from spaceship import Spaceship
 from obstacle import Obstacle
 from obstacle import grid
+from alien import Alien
+from laser import Laser
+from alien import Mysteryship
 
 SCREEN_WIDTH = 500
 SCREEN_HEIGHT = 500
