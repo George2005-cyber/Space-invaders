@@ -94,7 +94,7 @@ class Game:
                         self.lives -= 1
                         print(f"Hit! Lives remaining: {self.lives}")
                         if self.lives <= 0:
-                            print("Game Over!")
+                            print("Game Over!")# game over message
                             pygame.quit()
                             exit()
                     for obstacle in self.obstacles:
