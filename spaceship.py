@@ -46,5 +46,7 @@ class Spaceship(pygame.sprite.Sprite):
         if not self.laser_ready:
             current_time = pygame.time.get_ticks()
             if current_time - self.laser_time >= self.laser_delay:
-                self.laser_ready = True            
- 
+                self.laser_ready = True  
+
+    def reset(self):
+        self.rect.midbottom = (self.screen_width/2, self.screen_height - 10)
