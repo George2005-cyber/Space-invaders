@@ -27,7 +27,6 @@ class Obstacle:
     def __init__(self, x, y):
         self.block_group = pygame.sprite.Group()
         for row in range(len(grid)):
-<<<<<<< Updated upstream
             for column in range(len(grid[0])):
                 if grid[row][column] == 1:
                     pos_x = x + column * 3
@@ -35,12 +34,3 @@ class Obstacle:
                     block = Block(pos_x, pos_y, 3, 3)
                     self.block_group.add(block)
                             
-=======
-            for col in range(len(grid[0])):
-                if grid[row][col] == 1:
-                   pos_x = x + col * 3
-                   pos_y  = y + row * 3
-                   new_block = block(pos_x, pos_y, 3, 3)
-                   self.block_group.add(new_block)
-                    
->>>>>>> Stashed changes
