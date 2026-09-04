@@ -24,6 +24,7 @@ class Game:
         self.score = 0
         self.highscore = 0
         self.load_highscore()
+        self.alien_speed = 1
 
 
     def create_obstacles(self):
@@ -53,7 +54,7 @@ class Game:
                 self.aliens_group.add(alien)
 
     def move_aliens(self):
-        self.aliens_group.update(self.aliens_direction)
+        self.aliens_group.update(self.aliens_direction * self.alien_speed)
 
         alien_sprites = self.aliens_group.sprites()
         for alien in alien_sprites:
@@ -89,6 +90,7 @@ class Game:
                         self.score += alien.type * 100
                         self.check_for_highscore()
                         laser_sprite.kill()
+                        self.alien_speed += 0.1
 
                 if  pygame.sprite.spritecollide(laser_sprite, self.mysteryship_group, True):
                     self.score += 500
@@ -126,6 +128,7 @@ class Game:
     def reset(self):
         self.run = True
         self.lives = 3
+        self.alien_speed = 1 
         self.spaceship_group.sprite.reset()
         self.aliens_group.empty()
         self.alien_lasers_group.empty()
