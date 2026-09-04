@@ -17,6 +17,8 @@ score_text_surface = font.render("SCORE", False, YELLOW)
 highscore_text_surface = font.render("HIGH-SCORE", False, YELLOW)
 
 screen = pygame.display.set_mode((SCREEN_WIDTH + OFFSET, SCREEN_HEIGHT + 2*OFFSET))
+background = pygame.image.load("images/background 2.jpg").convert()
+backgroung =  pygame.transform.scale(background, (SCREEN_WIDTH + OFFSET, SCREEN_HEIGHT + 2*OFFSET))
 pygame.display.set_caption("Python Space Invaders")
 
 clock = pygame.time.Clock()
@@ -56,7 +58,8 @@ while True:
         game.check_for_collisions()
 
     # Drawing
-    screen.fill(GREY)
+    screen.blit(background, (0, 0))
+    #screen.fill(GREY)
     pygame.draw.rect(screen, YELLOW, (10, 10, 780, 780), 2, 0, 60, 60, 60, 60)
     pygame.draw.line(screen, YELLOW, (25, 730), (775, 730), 3)
 
