@@ -19,6 +19,7 @@ highscore_text_surface = font.render("HIGH-SCORE", False, YELLOW)
 screen = pygame.display.set_mode((SCREEN_WIDTH + OFFSET, SCREEN_HEIGHT + 2*OFFSET))
 background = pygame.image.load("images/background 2.jpg").convert()
 backgroung =  pygame.transform.scale(background, (SCREEN_WIDTH + OFFSET, SCREEN_HEIGHT + 2*OFFSET))
+
 pygame.display.set_caption("Python Space Invaders")
 
 clock = pygame.time.Clock()
