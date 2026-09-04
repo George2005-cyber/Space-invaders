@@ -2,9 +2,9 @@ import pygame, sys, random
 from game import Game
 pygame.init()
 
-SCREEN_WIDTH = 800 # screen size
-SCREEN_HEIGHT = 600
-OFFSET = 50
+SCREEN_WIDTH = 730 # screen size
+SCREEN_HEIGHT = 715
+OFFSET = 60
 
 
 GREY = (29, 29, 27)
